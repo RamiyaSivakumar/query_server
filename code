@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+host=$(hostname)
+echo Current Server: $host
