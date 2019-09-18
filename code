@@ -1,3 +1,14 @@
 #!/usr/bin/bash
 host=$(hostname)
-echo Current Server: $host
+User=($USER)
+
+if [ "$1" == -l ]; then
+   echo Current Server: $User@$host
+elif [ -z "$1" ];then
+   echo Current Server: $host
+elif [ "$1" == "--help" ];then
+   echo "Usage: query_server.sh [OPTION]\n Prints the name of the current server as: "Current Server:[servername]\n -l Prints the username with the servername\nexit status: \n0 if OK,\n1 problem with command line
+
+else
+exit
+fi
